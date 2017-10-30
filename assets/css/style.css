@@ -26,7 +26,7 @@ p {
   margin-bottom: 20px;
 }
 
-p:last-child {
+xs p:last-child {
   margin-bottom: 0;
 }
 
@@ -246,9 +246,9 @@ input[type=submit] {
 
   #masthead {
     position: static;
+    width: 90%;
   }
-
-  #logo {
+  xs #logo {
     width: 100%;
   }
 
@@ -277,8 +277,10 @@ input[type=submit] {
 @media screen and (max-width: 768px) {
 
   #masthead {
-    position: static;
+    position: fixed;
     margin-left: 5%;
+    width: 90%;
+    max-width: 768px;
   }
 
   .flex-container {
@@ -290,21 +292,19 @@ input[type=submit] {
   }
 
   .container {
-    max-width: 768px;
+    width: 100%;
   }
 
   .sidebar {
     width: 90%;
+    float: left;
+    max-width: 648;
   }
 
   .main-section {
     width: 90%;
   }
 
-  .sidebar {
-    float: left;
-    max-width: 648;
-  }
 }
 
 @media screen and (max-width: 980px) {
@@ -314,6 +314,11 @@ input[type=submit] {
   }
 
 
+  #masthead {
+    width: 90%;
+    max-width: 980px;
+  }
+
   .main-section {
     width: 90%;
   }
@@ -321,5 +326,17 @@ input[type=submit] {
   .sidebar {
     max-width: none;
   }
-
 }
+
+@media screen and (min-width: 980px) {
+
+  body {
+    max-width: 980px;
+  }
+
+  #masthead {
+    width: 980px;
+  }
+}
+
+xs
